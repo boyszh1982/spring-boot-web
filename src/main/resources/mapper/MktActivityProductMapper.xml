@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nameless.mapper.MktActivityProductMapper" >
+  <resultMap id="BaseResultMap" type="com.nameless.bean.MktActivityProduct" >
+    <id column="product_id" property="productId" jdbcType="VARCHAR" />
+    <id column="recruit_id" property="recruitId" jdbcType="INTEGER" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="merchant" property="merchant" jdbcType="VARCHAR" />
+    <result column="bmerchant" property="bmerchant" jdbcType="VARCHAR" />
+    <result column="plaza" property="plaza" jdbcType="VARCHAR" />
+    <result column="store" property="store" jdbcType="VARCHAR" />
+    <result column="product_price" property="productPrice" jdbcType="BIGINT" />
+    <result column="merchant_subsidy" property="merchantSubsidy" jdbcType="BIGINT" />
+    <result column="platform_subsidy" property="platformSubsidy" jdbcType="BIGINT" />
+    <result column="activity_price" property="activityPrice" jdbcType="BIGINT" />
+    <result column="product_source" property="productSource" jdbcType="VARCHAR" />
+    <result column="submit_time" property="submitTime" jdbcType="TIMESTAMP" />
+    <result column="add_user" property="addUser" jdbcType="VARCHAR" />
+    <result column="add_time" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="wf_status" property="wfStatus" jdbcType="VARCHAR" />
+    <result column="curr_user" property="currUser" jdbcType="VARCHAR" />
+    <result column="last_update" property="lastUpdate" jdbcType="TIMESTAMP" />
+    <result column="wf_msg" property="wfMsg" jdbcType="VARCHAR" />
+    <result column="product_sku" property="productSku" jdbcType="VARCHAR" />
+    <result column="product_sn" property="productSn" jdbcType="VARCHAR" />
+    <result column="merchant_id" property="merchantId" jdbcType="VARCHAR" />
+    <result column="bmerchant_id" property="bmerchantId" jdbcType="VARCHAR" />
+    <result column="plaza_id" property="plazaId" jdbcType="VARCHAR" />
+    <result column="store_id" property="storeId" jdbcType="VARCHAR" />
+    <result column="city_id" property="cityId" jdbcType="VARCHAR" />
+    <result column="group_id" property="groupId" jdbcType="VARCHAR" />
+    <result column="product_code" property="productCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    product_id, recruit_id, product_name, merchant, bmerchant, plaza, store, product_price, 
+    merchant_subsidy, platform_subsidy, activity_price, product_source, submit_time, 
+    add_user, add_time, wf_status, curr_user, last_update, wf_msg, product_sku, product_sn, 
+    merchant_id, bmerchant_id, plaza_id, store_id, city_id, group_id, product_code
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.nameless.bean.MktActivityProductKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from mkt_activity_product
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.nameless.bean.MktActivityProductKey" >
+    delete from mkt_activity_product
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.nameless.bean.MktActivityProduct" >
+    insert into mkt_activity_product (product_id, recruit_id, product_name, 
+      merchant, bmerchant, plaza, 
+      store, product_price, merchant_subsidy, 
+      platform_subsidy, activity_price, product_source, 
+      submit_time, add_user, add_time, 
+      wf_status, curr_user, last_update, 
+      wf_msg, product_sku, product_sn, 
+      merchant_id, bmerchant_id, plaza_id, 
+      store_id, city_id, group_id, 
+      product_code)
+    values (#{productId,jdbcType=VARCHAR}, #{recruitId,jdbcType=INTEGER}, #{productName,jdbcType=VARCHAR}, 
+      #{merchant,jdbcType=VARCHAR}, #{bmerchant,jdbcType=VARCHAR}, #{plaza,jdbcType=VARCHAR}, 
+      #{store,jdbcType=VARCHAR}, #{productPrice,jdbcType=BIGINT}, #{merchantSubsidy,jdbcType=BIGINT}, 
+      #{platformSubsidy,jdbcType=BIGINT}, #{activityPrice,jdbcType=BIGINT}, #{productSource,jdbcType=VARCHAR}, 
+      #{submitTime,jdbcType=TIMESTAMP}, #{addUser,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, 
+      #{wfStatus,jdbcType=VARCHAR}, #{currUser,jdbcType=VARCHAR}, #{lastUpdate,jdbcType=TIMESTAMP}, 
+      #{wfMsg,jdbcType=VARCHAR}, #{productSku,jdbcType=VARCHAR}, #{productSn,jdbcType=VARCHAR}, 
+      #{merchantId,jdbcType=VARCHAR}, #{bmerchantId,jdbcType=VARCHAR}, #{plazaId,jdbcType=VARCHAR}, 
+      #{storeId,jdbcType=VARCHAR}, #{cityId,jdbcType=VARCHAR}, #{groupId,jdbcType=VARCHAR}, 
+      #{productCode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.nameless.bean.MktActivityProduct" >
+    insert into mkt_activity_product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="recruitId != null" >
+        recruit_id,
+      </if>
+      <if test="productName != null" >
+        product_name,
+      </if>
+      <if test="merchant != null" >
+        merchant,
+      </if>
+      <if test="bmerchant != null" >
+        bmerchant,
+      </if>
+      <if test="plaza != null" >
+        plaza,
+      </if>
+      <if test="store != null" >
+        store,
+      </if>
+      <if test="productPrice != null" >
+        product_price,
+      </if>
+      <if test="merchantSubsidy != null" >
+        merchant_subsidy,
+      </if>
+      <if test="platformSubsidy != null" >
+        platform_subsidy,
+      </if>
+      <if test="activityPrice != null" >
+        activity_price,
+      </if>
+      <if test="productSource != null" >
+        product_source,
+      </if>
+      <if test="submitTime != null" >
+        submit_time,
+      </if>
+      <if test="addUser != null" >
+        add_user,
+      </if>
+      <if test="addTime != null" >
+        add_time,
+      </if>
+      <if test="wfStatus != null" >
+        wf_status,
+      </if>
+      <if test="currUser != null" >
+        curr_user,
+      </if>
+      <if test="lastUpdate != null" >
+        last_update,
+      </if>
+      <if test="wfMsg != null" >
+        wf_msg,
+      </if>
+      <if test="productSku != null" >
+        product_sku,
+      </if>
+      <if test="productSn != null" >
+        product_sn,
+      </if>
+      <if test="merchantId != null" >
+        merchant_id,
+      </if>
+      <if test="bmerchantId != null" >
+        bmerchant_id,
+      </if>
+      <if test="plazaId != null" >
+        plaza_id,
+      </if>
+      <if test="storeId != null" >
+        store_id,
+      </if>
+      <if test="cityId != null" >
+        city_id,
+      </if>
+      <if test="groupId != null" >
+        group_id,
+      </if>
+      <if test="productCode != null" >
+        product_code,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="productId != null" >
+        #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitId != null" >
+        #{recruitId,jdbcType=INTEGER},
+      </if>
+      <if test="productName != null" >
+        #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="merchant != null" >
+        #{merchant,jdbcType=VARCHAR},
+      </if>
+      <if test="bmerchant != null" >
+        #{bmerchant,jdbcType=VARCHAR},
+      </if>
+      <if test="plaza != null" >
+        #{plaza,jdbcType=VARCHAR},
+      </if>
+      <if test="store != null" >
+        #{store,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null" >
+        #{productPrice,jdbcType=BIGINT},
+      </if>
+      <if test="merchantSubsidy != null" >
+        #{merchantSubsidy,jdbcType=BIGINT},
+      </if>
+      <if test="platformSubsidy != null" >
+        #{platformSubsidy,jdbcType=BIGINT},
+      </if>
+      <if test="activityPrice != null" >
+        #{activityPrice,jdbcType=BIGINT},
+      </if>
+      <if test="productSource != null" >
+        #{productSource,jdbcType=VARCHAR},
+      </if>
+      <if test="submitTime != null" >
+        #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUser != null" >
+        #{addUser,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wfStatus != null" >
+        #{wfStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="currUser != null" >
+        #{currUser,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdate != null" >
+        #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wfMsg != null" >
+        #{wfMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="productSku != null" >
+        #{productSku,jdbcType=VARCHAR},
+      </if>
+      <if test="productSn != null" >
+        #{productSn,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantId != null" >
+        #{merchantId,jdbcType=VARCHAR},
+      </if>
+      <if test="bmerchantId != null" >
+        #{bmerchantId,jdbcType=VARCHAR},
+      </if>
+      <if test="plazaId != null" >
+        #{plazaId,jdbcType=VARCHAR},
+      </if>
+      <if test="storeId != null" >
+        #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        #{cityId,jdbcType=VARCHAR},
+      </if>
+      <if test="groupId != null" >
+        #{groupId,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null" >
+        #{productCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.nameless.bean.MktActivityProduct" >
+    update mkt_activity_product
+    <set >
+      <if test="productName != null" >
+        product_name = #{productName,jdbcType=VARCHAR},
+      </if>
+      <if test="merchant != null" >
+        merchant = #{merchant,jdbcType=VARCHAR},
+      </if>
+      <if test="bmerchant != null" >
+        bmerchant = #{bmerchant,jdbcType=VARCHAR},
+      </if>
+      <if test="plaza != null" >
+        plaza = #{plaza,jdbcType=VARCHAR},
+      </if>
+      <if test="store != null" >
+        store = #{store,jdbcType=VARCHAR},
+      </if>
+      <if test="productPrice != null" >
+        product_price = #{productPrice,jdbcType=BIGINT},
+      </if>
+      <if test="merchantSubsidy != null" >
+        merchant_subsidy = #{merchantSubsidy,jdbcType=BIGINT},
+      </if>
+      <if test="platformSubsidy != null" >
+        platform_subsidy = #{platformSubsidy,jdbcType=BIGINT},
+      </if>
+      <if test="activityPrice != null" >
+        activity_price = #{activityPrice,jdbcType=BIGINT},
+      </if>
+      <if test="productSource != null" >
+        product_source = #{productSource,jdbcType=VARCHAR},
+      </if>
+      <if test="submitTime != null" >
+        submit_time = #{submitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUser != null" >
+        add_user = #{addUser,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        add_time = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wfStatus != null" >
+        wf_status = #{wfStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="currUser != null" >
+        curr_user = #{currUser,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdate != null" >
+        last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wfMsg != null" >
+        wf_msg = #{wfMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="productSku != null" >
+        product_sku = #{productSku,jdbcType=VARCHAR},
+      </if>
+      <if test="productSn != null" >
+        product_sn = #{productSn,jdbcType=VARCHAR},
+      </if>
+      <if test="merchantId != null" >
+        merchant_id = #{merchantId,jdbcType=VARCHAR},
+      </if>
+      <if test="bmerchantId != null" >
+        bmerchant_id = #{bmerchantId,jdbcType=VARCHAR},
+      </if>
+      <if test="plazaId != null" >
+        plaza_id = #{plazaId,jdbcType=VARCHAR},
+      </if>
+      <if test="storeId != null" >
+        store_id = #{storeId,jdbcType=VARCHAR},
+      </if>
+      <if test="cityId != null" >
+        city_id = #{cityId,jdbcType=VARCHAR},
+      </if>
+      <if test="groupId != null" >
+        group_id = #{groupId,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null" >
+        product_code = #{productCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.nameless.bean.MktActivityProduct" >
+    update mkt_activity_product
+    set product_name = #{productName,jdbcType=VARCHAR},
+      merchant = #{merchant,jdbcType=VARCHAR},
+      bmerchant = #{bmerchant,jdbcType=VARCHAR},
+      plaza = #{plaza,jdbcType=VARCHAR},
+      store = #{store,jdbcType=VARCHAR},
+      product_price = #{productPrice,jdbcType=BIGINT},
+      merchant_subsidy = #{merchantSubsidy,jdbcType=BIGINT},
+      platform_subsidy = #{platformSubsidy,jdbcType=BIGINT},
+      activity_price = #{activityPrice,jdbcType=BIGINT},
+      product_source = #{productSource,jdbcType=VARCHAR},
+      submit_time = #{submitTime,jdbcType=TIMESTAMP},
+      add_user = #{addUser,jdbcType=VARCHAR},
+      add_time = #{addTime,jdbcType=TIMESTAMP},
+      wf_status = #{wfStatus,jdbcType=VARCHAR},
+      curr_user = #{currUser,jdbcType=VARCHAR},
+      last_update = #{lastUpdate,jdbcType=TIMESTAMP},
+      wf_msg = #{wfMsg,jdbcType=VARCHAR},
+      product_sku = #{productSku,jdbcType=VARCHAR},
+      product_sn = #{productSn,jdbcType=VARCHAR},
+      merchant_id = #{merchantId,jdbcType=VARCHAR},
+      bmerchant_id = #{bmerchantId,jdbcType=VARCHAR},
+      plaza_id = #{plazaId,jdbcType=VARCHAR},
+      store_id = #{storeId,jdbcType=VARCHAR},
+      city_id = #{cityId,jdbcType=VARCHAR},
+      group_id = #{groupId,jdbcType=VARCHAR},
+      product_code = #{productCode,jdbcType=VARCHAR}
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+  </update>
+</mapper>
