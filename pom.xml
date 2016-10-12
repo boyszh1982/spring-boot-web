@@ -92,6 +92,14 @@
 
 		<!-- hibernate end -->
 
+		<!-- zookeeper begin -->
+		<dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.1</version>
+        </dependency>
+		<!-- zookeeper end -->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
