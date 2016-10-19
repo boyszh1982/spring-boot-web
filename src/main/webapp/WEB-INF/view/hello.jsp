@@ -21,5 +21,10 @@
 <body>
 <h1>-----</h1>
 <h2>${message }</h2>
+
+商品名称：<c:out value="${product.productName }"></c:out><br/>
+<c:forEach var="stock" items="${product.stockDetail }">
+商品SKUSN：<c:out value="${stock.skuSn }"></c:out><br/>
+</c:forEach>
 </body>
 </html>

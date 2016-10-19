@@ -1,6 +1,7 @@
 package com.nameless.bean;
 
 import java.util.Date;
+import java.util.List;
 
 public class MktActivityProduct extends MktActivityProductKey {
     private String productName;
@@ -55,7 +56,17 @@ public class MktActivityProduct extends MktActivityProductKey {
 
     private String productCode;
 
-    public String getProductName() {
+    private List<MktProductStockDetail> stockDetail;
+    
+    public List<MktProductStockDetail> getStockDetail() {
+		return stockDetail;
+	}
+
+	public void setStockDetail(List<MktProductStockDetail> stockDetail) {
+		this.stockDetail = stockDetail;
+	}
+
+	public String getProductName() {
         return productName;
     }
 

@@ -64,6 +64,12 @@ public class HomeServiceImpl implements IHomeService {
 		return "success";
 		
 	}
+
+	@Override
+	public MktActivityProduct getProductAndStock(MktActivityProductKey key) {
+		// TODO Auto-generated method stub
+		return activityProductMapper.getProductAndStock(key);
+	}
 	
 	
 

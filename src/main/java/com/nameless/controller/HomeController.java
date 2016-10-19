@@ -1,5 +1,7 @@
 package com.nameless.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.JSON;
+import com.nameless.bean.MktActivityProduct;
+import com.nameless.bean.MktActivityProductKey;
 import com.nameless.properties.JdbcProp;
 import com.nameless.service.IHomeService;
 
@@ -41,8 +46,14 @@ public class HomeController {
 	
 	@RequestMapping("/jsp")
 	public ModelAndView toJsp(){
+		MktActivityProductKey key = new MktActivityProductKey();
+		key.setProductId("1000010205-9052724");
+		key.setRecruitId(34414);
+		MktActivityProduct product = homeService.getProductAndStock(key);
+		System.out.println(JSON.toJSONString(product));
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("message","大家好，欢迎来到技术交流会议！");
+		mav.addObject("product", product);
 		mav.setViewName("hello");
 		return mav ;
 	}

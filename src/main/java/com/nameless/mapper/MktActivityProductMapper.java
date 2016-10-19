@@ -15,4 +15,6 @@ public interface MktActivityProductMapper {
     int updateByPrimaryKeySelective(MktActivityProduct record);
 
     int updateByPrimaryKey(MktActivityProduct record);
+
+	MktActivityProduct getProductAndStock(MktActivityProductKey key);
 }

@@ -30,9 +30,16 @@
     <result column="city_id" property="cityId" jdbcType="VARCHAR" />
     <result column="group_id" property="groupId" jdbcType="VARCHAR" />
     <result column="product_code" property="productCode" jdbcType="VARCHAR" />
+    <collection property="stockDetail" resultMap="com.nameless.mapper.MktProductStockDetailMapper.BaseResultMap" />
   </resultMap>
   <sql id="Base_Column_List" >
     product_id, recruit_id, product_name, merchant, bmerchant, plaza, store, product_price, 
+    merchant_subsidy, platform_subsidy, activity_price, product_source, submit_time, 
+    add_user, add_time, wf_status, curr_user, last_update, wf_msg, product_sku, product_sn, 
+    merchant_id, bmerchant_id, plaza_id, store_id, city_id, group_id, product_code
+  </sql>
+   <sql id="Base_Column_List_WithoutPK" >
+    product_name, merchant, bmerchant, plaza, store, product_price, 
     merchant_subsidy, platform_subsidy, activity_price, product_source, submit_time, 
     add_user, add_time, wf_status, curr_user, last_update, wf_msg, product_sku, product_sn, 
     merchant_id, bmerchant_id, plaza_id, store_id, city_id, group_id, product_code
@@ -362,4 +369,15 @@
     where product_id = #{productId,jdbcType=VARCHAR}
       and recruit_id = #{recruitId,jdbcType=INTEGER}
   </update>
+  
+  <select id="getProductAndStock" parameterType="com.nameless.bean.MktActivityProductKey" resultMap="BaseResultMap">
+SELECT
+	*
+FROM
+	mkt_activity_product t1
+INNER JOIN mkt_product_stock_detail t2 ON t1.recruit_id = t2.recruit_id
+AND t1.product_id = t2.product_id
+WHERE t1.recruit_id = #{recruitId,jdbcType=INTEGER}
+AND t1.product_id = #{productId,jdbcType=VARCHAR}
+  </select>
 </mapper>

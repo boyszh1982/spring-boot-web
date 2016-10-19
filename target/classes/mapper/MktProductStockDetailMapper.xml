@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nameless.mapper.MktProductStockDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.nameless.bean.MktProductStockDetail" >
+    <id column="product_id" property="productId" jdbcType="VARCHAR" />
+    <id column="recruit_id" property="recruitId" jdbcType="INTEGER" />
+    <id column="stock_code" property="stockCode" jdbcType="VARCHAR" />
+    <result column="stock_num" property="stockNum" jdbcType="BIGINT" />
+    <result column="agree_num" property="agreeNum" jdbcType="BIGINT" />
+    <result column="sku_id" property="skuId" jdbcType="VARCHAR" />
+    <result column="sku_sn" property="skuSn" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    product_id, recruit_id, stock_code, stock_num, agree_num, sku_id, sku_sn
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.nameless.bean.MktProductStockDetailKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from mkt_product_stock_detail
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+      and stock_code = #{stockCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="com.nameless.bean.MktProductStockDetailKey" >
+    delete from mkt_product_stock_detail
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+      and stock_code = #{stockCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.nameless.bean.MktProductStockDetail" >
+    insert into mkt_product_stock_detail (product_id, recruit_id, stock_code, 
+      stock_num, agree_num, sku_id, 
+      sku_sn)
+    values (#{productId,jdbcType=VARCHAR}, #{recruitId,jdbcType=INTEGER}, #{stockCode,jdbcType=VARCHAR}, 
+      #{stockNum,jdbcType=BIGINT}, #{agreeNum,jdbcType=BIGINT}, #{skuId,jdbcType=VARCHAR}, 
+      #{skuSn,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.nameless.bean.MktProductStockDetail" >
+    insert into mkt_product_stock_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="productId != null" >
+        product_id,
+      </if>
+      <if test="recruitId != null" >
+        recruit_id,
+      </if>
+      <if test="stockCode != null" >
+        stock_code,
+      </if>
+      <if test="stockNum != null" >
+        stock_num,
+      </if>
+      <if test="agreeNum != null" >
+        agree_num,
+      </if>
+      <if test="skuId != null" >
+        sku_id,
+      </if>
+      <if test="skuSn != null" >
+        sku_sn,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="productId != null" >
+        #{productId,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitId != null" >
+        #{recruitId,jdbcType=INTEGER},
+      </if>
+      <if test="stockCode != null" >
+        #{stockCode,jdbcType=VARCHAR},
+      </if>
+      <if test="stockNum != null" >
+        #{stockNum,jdbcType=BIGINT},
+      </if>
+      <if test="agreeNum != null" >
+        #{agreeNum,jdbcType=BIGINT},
+      </if>
+      <if test="skuId != null" >
+        #{skuId,jdbcType=VARCHAR},
+      </if>
+      <if test="skuSn != null" >
+        #{skuSn,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.nameless.bean.MktProductStockDetail" >
+    update mkt_product_stock_detail
+    <set >
+      <if test="stockNum != null" >
+        stock_num = #{stockNum,jdbcType=BIGINT},
+      </if>
+      <if test="agreeNum != null" >
+        agree_num = #{agreeNum,jdbcType=BIGINT},
+      </if>
+      <if test="skuId != null" >
+        sku_id = #{skuId,jdbcType=VARCHAR},
+      </if>
+      <if test="skuSn != null" >
+        sku_sn = #{skuSn,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+      and stock_code = #{stockCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.nameless.bean.MktProductStockDetail" >
+    update mkt_product_stock_detail
+    set stock_num = #{stockNum,jdbcType=BIGINT},
+      agree_num = #{agreeNum,jdbcType=BIGINT},
+      sku_id = #{skuId,jdbcType=VARCHAR},
+      sku_sn = #{skuSn,jdbcType=VARCHAR}
+    where product_id = #{productId,jdbcType=VARCHAR}
+      and recruit_id = #{recruitId,jdbcType=INTEGER}
+      and stock_code = #{stockCode,jdbcType=VARCHAR}
+  </update>
+</mapper>
