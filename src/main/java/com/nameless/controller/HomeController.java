@@ -3,10 +3,9 @@ package com.nameless.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.nameless.properties.JdbcProp;
 import com.nameless.service.IHomeService;
@@ -38,5 +37,13 @@ public class HomeController {
 	public String toHome(){
 		homeService.toTrans();
 		return homeService.toHome("Sunzhenhua") + "," + hello + " <<<< " + jdbcProp.getHelloworld();
+	}
+	
+	@RequestMapping("/jsp")
+	public ModelAndView toJsp(){
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("message","大家好，欢迎来到技术交流会议！");
+		mav.setViewName("hello");
+		return mav ;
 	}
 }
