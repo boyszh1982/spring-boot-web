@@ -38,12 +38,6 @@
     add_user, add_time, wf_status, curr_user, last_update, wf_msg, product_sku, product_sn, 
     merchant_id, bmerchant_id, plaza_id, store_id, city_id, group_id, product_code
   </sql>
-   <sql id="Base_Column_List_WithoutPK" >
-    product_name, merchant, bmerchant, plaza, store, product_price, 
-    merchant_subsidy, platform_subsidy, activity_price, product_source, submit_time, 
-    add_user, add_time, wf_status, curr_user, last_update, wf_msg, product_sku, product_sn, 
-    merchant_id, bmerchant_id, plaza_id, store_id, city_id, group_id, product_code
-  </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.nameless.bean.MktActivityProductKey" >
     select 
     <include refid="Base_Column_List" />
