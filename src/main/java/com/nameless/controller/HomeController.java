@@ -44,6 +44,7 @@ public class HomeController {
 		return homeService.toHome("Sunzhenhua") + "," + hello + " <<<< " + jdbcProp.getHelloworld();
 	}
 	
+	//http://www.mybatis.org/mybatis-3/zh/dynamic-sql.html
 	@RequestMapping("/jsp")
 	public ModelAndView toJsp(){
 		MktActivityProductKey key = new MktActivityProductKey();
