@@ -57,4 +57,15 @@ public class HomeController {
 		mav.setViewName("hello");
 		return mav ;
 	}
+	
+	@RequestMapping("/jsp2")
+	public ModelAndView toJsp2(){
+		List<MktActivityProduct> productList = homeService.getProductList(34414);
+		System.out.println(JSON.toJSONString(productList));
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("productList",productList);
+		mav.setViewName("hello2");
+		return mav;
+	}
+	
 }

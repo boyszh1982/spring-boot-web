@@ -1,5 +1,7 @@
 package com.nameless.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -69,6 +71,12 @@ public class HomeServiceImpl implements IHomeService {
 	public MktActivityProduct getProductAndStock(MktActivityProductKey key) {
 		// TODO Auto-generated method stub
 		return activityProductMapper.getProductAndStock(key);
+	}
+
+	@Override
+	public List<MktActivityProduct> getProductList(int recruitId) {
+		// TODO Auto-generated method stub
+		return activityProductMapper.getProductList(recruitId);
 	}
 	
 	

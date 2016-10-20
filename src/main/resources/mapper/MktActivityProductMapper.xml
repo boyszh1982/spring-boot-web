@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.nameless.bean.MktActivityProduct" >
     <id column="product_id" property="productId" jdbcType="VARCHAR" />
     <id column="recruit_id" property="recruitId" jdbcType="INTEGER" />
-    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" typeHandler="com.nameless.mapper.typehandler.ImportMarkTypeHandler"/>
     <result column="merchant" property="merchant" jdbcType="VARCHAR" />
     <result column="bmerchant" property="bmerchant" jdbcType="VARCHAR" />
     <result column="plaza" property="plaza" jdbcType="VARCHAR" />
@@ -364,7 +364,7 @@
       and recruit_id = #{recruitId,jdbcType=INTEGER}
   </update>
   
-  <select id="getProductAndStock" parameterType="com.nameless.bean.MktActivityProductKey" resultMap="BaseResultMap">
+  <select id="getProductAndStock" parameterType="key1" resultMap="BaseResultMap">
 SELECT
 	*
 FROM
