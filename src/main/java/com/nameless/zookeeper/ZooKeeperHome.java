@@ -4,7 +4,7 @@ import org.I0Itec.zkclient.ZkClient;
 
 public class ZooKeeperHome {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		/**
 		 * 在招商系统中ZooKeeper的应用流程
 		 * redis的服务地址为 w10669.wdds.redis.com:10669 （域名会改为IP，且多个）

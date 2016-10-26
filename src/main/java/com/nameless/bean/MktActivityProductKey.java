@@ -1,13 +1,20 @@
 package com.nameless.bean;
 
+import java.io.Serializable;
+
 import org.apache.ibatis.type.Alias;
 /**
  * mybatis 中可以给 BEAN起个别名在XML中使用，如key1在
  * <select id="getProductAndStock" parameterType="key1" resultMap="BaseResultMap">中使用
  */
 @Alias("key1")
-public class MktActivityProductKey {
-    private String productId;
+public class MktActivityProductKey implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6804484917129004919L;
+
+	private String productId;
 
     private Integer recruitId;
 

@@ -1,7 +1,12 @@
 package com.nameless.bean;
 
 public class MktProductStockDetail extends MktProductStockDetailKey {
-    private Long stockNum;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1041259286795061656L;
+
+	private Long stockNum;
 
     private Long agreeNum;
 

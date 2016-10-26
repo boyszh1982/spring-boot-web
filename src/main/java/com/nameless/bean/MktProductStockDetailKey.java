@@ -1,7 +1,14 @@
 package com.nameless.bean;
 
-public class MktProductStockDetailKey {
-    private String productId;
+import java.io.Serializable;
+
+public class MktProductStockDetailKey implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -7094218428400519034L;
+
+	private String productId;
 
     private Integer recruitId;
 

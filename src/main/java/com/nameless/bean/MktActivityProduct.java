@@ -4,7 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 public class MktActivityProduct extends MktActivityProductKey {
-    private String productName;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1273001787389741599L;
+
+	private String productName;
 
     private String merchant;
 

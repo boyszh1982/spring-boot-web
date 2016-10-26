@@ -101,12 +101,12 @@
 
 		<!-- zookeeper begin -->
 		<dependency>
-            <groupId>com.github.sgroschupf</groupId>
-            <artifactId>zkclient</artifactId>
-            <version>0.1</version>
-        </dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
 		<!-- zookeeper end -->
-	
+
 		<!-- fastjson begin -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -120,6 +120,24 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- log4j -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j</artifactId>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>spring-boot-web</finalName>
