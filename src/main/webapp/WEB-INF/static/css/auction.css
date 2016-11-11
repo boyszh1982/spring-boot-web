@@ -1,0 +1,25 @@
+@charset "utf-8";
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    /* opacity: 0; */
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    /* direction: ltr; */
+    cursor: pointer;
+}
+.auctionList{height:auto;border:1px green dashed;margin-bottom:5px;}
+.basicinfo{margin-left: 15px;}
+.benefit{border:1px orange dashed;height: 84px;}
+.previewImage{padding-left:154px;}
+#auctionApplyPopup{padding:5px;}
+.reqDetail{position:relative;width:85%;float:right;right:5px;height:90px;}
+.floatRight{float:right;position:relative;}
+.benefitArea{padding-left:100px;}
+.auctionBtn{color:orangered}

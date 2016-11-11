@@ -1,0 +1,23 @@
+tr {
+	height:40px;
+}
+.td_label {
+	word-break:break-all;
+	text-align:right;
+	width:150px;
+   }
+.td_value {
+	word-break:break-all;
+	text-align:left;
+	width:200px;
+   }   
+.operate_panel{margin-left:50px;
+			   margin-top:20px;
+   		       margin-right: 50px;
+		       font: 16px/1.5 microsoft yahei;
+			   }
+.operate_panel_tool{margin-left:50px;
+				   margin-top:20px;
+			       font: 16px/1.5 microsoft yahei;
+			       text-align:center;
+				   }

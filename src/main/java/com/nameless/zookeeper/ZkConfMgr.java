@@ -37,7 +37,7 @@ public class ZkConfMgr {
 	
 	private final static CountDownLatch latch = new CountDownLatch(1);
 	
-	public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
+	public static void main1(String[] args) throws IOException, InterruptedException, KeeperException {
 		
 		//ZooKeeper zk = new ZooKeeper(url, 5000, new ConfWatcher());
 		ZooKeeper zk = new ZooKeeper(url, 5000, new Watcher(){

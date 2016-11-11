@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------------------------------------
+ *
+ *
+ * 推荐管理页面css
+ ----------------------------------------------*/
+.list_title {
+	margin-top: 2px;
+	margin-buttom: 10px;
+	font-size: 14px;
+	color: black;
+}
+
+.list_searchlabel {
+	margin-right: 10px;
+}
+
+.list_itemspan {
+	margin-right: 12px;
+}

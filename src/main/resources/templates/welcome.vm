@@ -1,0 +1,33 @@
+#*
+学习要点
+1、velocity toolbox.xml的作用
+2、velocity.properties的作用
+3、静态资源引用 
+4、velocity工具方法
+*#
+#set($basePath=$!{request.contextPath})
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>$!{title}</title>
+    #parse('resource.vm')
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+</head>
+<body style="padding: 0px; margin: 0px; overflow-x: auto; overflow-y: hidden;">
+<!--头部   开始-->
+    #parse('header.vm')
+<!--头部   结束-->
+<!--内容   开始-->
+<div class="adminContent" style="width: 1920px; height: 922px;">
+    <!--内容左边   开始-->
+    #parse('menu.vm')
+    <!--内容左边   结束-->
+    <!--右边内容   开始-->
+    $screen_content
+    <!--/conRight-->
+    <!--右边内容   结束-->
+</div>
+<!--内容   结束-->
+
+
+</body>
+</html>

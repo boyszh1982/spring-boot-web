@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------------------------------------
+ *
+ *
+ * 首页内容管理页面css
+ ----------------------------------------------*/
+.ic_body {
+	
+}
+
+.ic_item {
+	margin-top: 20px;
+}
+
+.ic_item_prefix {
+	padding-right: 30px;
+}
+
+.paddingliter {
+	padding-right: 117px;
+}
+
+.ic_item_val {
+	
+}
+
+.ic_item_desc {
+	
+}
+
+.ic_item_com {
+	margin-left: 200px;
+}

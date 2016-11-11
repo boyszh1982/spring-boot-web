@@ -1,0 +1,41 @@
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    /* opacity: 0; */
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px;
+    /* direction: ltr; */
+    cursor: pointer;
+}
+.search_result{margin-left:164px;margin-top:20px;}
+.search_resultz_li{width:288px;}
+.search_resultz_li table{width:100%}
+.submit_subject{margin-left:164px;margin-top:20px;}
+.cancel_subject{margin-left:164px;margin-top:20px;}
+.href{text-decoration: none; color: #00309c;}
+.req-all{position: relative;display:none;width:120px;height:200px;top:10px;z-index:5;border: 1px solid;}
+.conform{font-size:12px;color:red;}
+.file-img{height:80px;}
+#shopImgs{margin-bottom:0px;margin-top:10px;}
+#advImgs{margin-bottom:0px;margin-top:10px;}
+#businessImgs{margin-bottom:0px;margin-top:10px;}
+#courtImgs{margin-bottom:0px;margin-top:10px;}
+.shopImgs-left{float: left;}
+.shopImgs-left-a{margin-top:5px;float: left;}
+.addBrand{margin-bottom:0px;margin-top:10px; margin-left:158px;}
+.addBuilding{margin-bottom:0px;margin-top:10px; margin-left:388px;}
+.auditPic{margin-bottom:0px;margin-top:10px; margin-left:148px;}
+.headPic{margin-bottom:0px;margin-top:10px; margin-left:14px;}
+.user{margin-bottom:0px;margin-top:-77px; margin-left:148px;}
+.userinfo{border:thick;font-size:16px;border: 1px solid;width:576px;height:105px;margin-left:148px;}
+.subject_description{margin-top:7px; margin-left:-9px;clear:both}
+.update-box{width:100%; margin:5px 0 0 150px;clear:both}
+.mainBrand{border:1px black dashed;height:150px;}
+.auctionBtn{ display: inline-block; height: 30px; width: 137px; text-align: center; overflow: hidden; color: white; border: none; background: #0471aa; line-height: 30px;font-size: 14px; vertical-align: middle;cursor: pointer; border-radius: 4px;}
+.conRCon { height: 1500px; overflow-y: scroll;}

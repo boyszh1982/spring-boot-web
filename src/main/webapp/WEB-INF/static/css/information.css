@@ -1,0 +1,14 @@
+@charset "utf-8";
+#errMsg{
+	color:red;font-size: 14px;font-weight:bold;
+}
+#contentArea{
+	border:1px black dashed;width:900px;height:70%;margin-left:110px;padding:20px;overflow-y:scroll
+}
+
+#btn_submit{
+	margin-left:400px;
+}
+.leftW1{
+	width:100px;
+}

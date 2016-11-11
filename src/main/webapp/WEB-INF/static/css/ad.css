@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------------------------------------
+ *
+ *
+ * 广告管理页面css
+ ----------------------------------------------*/
+.addBody {
+	height: 100%;
+}
+
+.addBody_banner {
+	
+}
+
+.addBody_item {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.addBody_commands {
+	margin-left: 20px;
+	margin-top: 35px;
+	margin-buttom: 20px;
+}
+
+.list_searchlabel {
+	margin-right: 10px;
+}
+
+.list_itemspan {
+	margin-right: 12px;
+}
+
+.command_before {
+	width: 300px;
+}

@@ -248,7 +248,7 @@ public class ZkWatchAPI implements Watcher {
         }
     }
 
-    public static void main(String [] args){
+    public static void main1(String [] args){
 
         // 定义父子类节点路径
         String rootPath = "/nodeRoot";

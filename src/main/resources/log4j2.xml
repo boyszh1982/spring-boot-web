@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="off" monitorInterval="1800">
+	<Properties>
+		<Property name="fileDir">logs</Property>
+		<Property name="appName">spring-boot-web</Property>
+	</Properties>
+
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} %-5level %class{36}.%M()/%L  - %msg%xEx%n" />
+		</Console>
+
+		<RollingFile name="normalRollingFile" fileName="${fileDir}/${appName}.log"
+			filePattern="${fileDir}/${date:yyyy-MM}/${appName}-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout
+				pattern="%d{yyyy.MM.dd HH:mm:ss z} %-5level %class{36}.%M()/%L - %msg%xEx%n" />
+			<SizeBasedTriggeringPolicy size="250 MB" />
+			<TimeBasedTriggeringPolicy interval="24" />
+			<DefaultRolloverStrategy max="100" />
+		</RollingFile>
+		<Async name="anormalRollingFile">
+          <AppenderRef ref="normalRollingFile" />
+        </Async>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.nameless" level="debug" additivity="false">
+			<AppenderRef ref="console"/>
+			<AppenderRef ref="anormalRollingFile"/>
+		</Logger>
+		<Root level="debug">
+			<Appender-ref ref="console" />
+			<AppenderRef ref="anormalRollingFile"/>
+		</Root>
+	</Loggers>
+</configuration>

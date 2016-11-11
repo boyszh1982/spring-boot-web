@@ -14,7 +14,7 @@ import org.apache.zookeeper.ZooKeeper;
 
 public class ZooKeeperWatch {
 
-	public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
+	public static void main1(String[] args) throws IOException, InterruptedException, KeeperException {
 		
 		final CountDownLatch latch = new CountDownLatch(1);
 		

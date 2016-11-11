@@ -1,0 +1,200 @@
+<script src="${request.contextPath}/static/js/iscroll.js"></script>
+<div class="conLeft">
+    <a href="javascript:void(0)" class="flex"></a>
+
+##    <div class="prevA" style="display: block;"><i></i></div>
+##    <div class="nextA" style="display: block;"><i></i></div>
+
+    <div class="slideBar" id="wrapper"><!--slideBar  start-->
+        <div class="slideBarCon" id="scroller">
+            <ul>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>项目库<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/subjects/list"><i></i>项目列表</a>
+                        <!--<a href="$request.contextPath/contact/page/add/1?entityId="><i></i>新建项目联系人</a>-->
+                        <a href="$request.contextPath/contact/page/list/1"><i></i>项目联系人列表</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>品牌库<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <!--
+                        <a href="$request.contextPath/brands/page/add"><i></i>新建品牌</a>
+                        <a href="$request.contextPath/contact/page/add/2?entityId="><i></i>新建品牌联系人</a>
+                        -->
+                        <a href="$request.contextPath/brands/page/list"><i></i>品牌列表</a>
+                        <a href="$request.contextPath/contact/page/list/2"><i></i>品牌联系人列表</a>
+                    </div>
+                </li>
+				<li>
+                    <a href="javascript:;" class="afir on"><i></i>项目需求管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/sbj-requirements/list/3"><i></i>商铺招商列表</a>
+                        <a href="$request.contextPath/sbj-requirements/list/4"><i></i>业态招商列表</a>
+                        <a href="$request.contextPath/sbj-requirements/list/5"><i></i>会展资源招商列表</a>
+                        <a href="$request.contextPath/sbj-requirements/list/6"><i></i>广告位招商列表</a>
+                        <a href="$request.contextPath/sbj-requirements/auditList/3"><i></i>待审核商铺招商</a>
+                        <a href="$request.contextPath/sbj-requirements/auditList/4"><i></i>待审核业态招商</a>
+                        <a href="$request.contextPath/sbj-requirements/auditList/5"><i></i>待审核会展资源招商</a>
+                        <a href="$request.contextPath/sbj-requirements/auditList/6"><i></i>待审核广告位招商</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>品牌需求管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                    	#*
+                        <a href="$request.contextPath/requirements/page/add/1"><i></i>新建品牌选址</a>
+                        <a href="$request.contextPath/requirements/page/add/2"><i></i>新建品牌加盟</a>
+                        *#
+                        <a href="$request.contextPath/requirements/page/list/1"><i></i>品牌拓展列表</a>
+                        <a href="$request.contextPath/requirements/page/list/2"><i></i>品牌加盟列表</a>
+                        <a href="$request.contextPath/requirements/page/auditlist/1"><i></i>拓展需求审核列表</a>
+                        <a href="$request.contextPath/requirements/page/auditlist/2"><i></i>加盟需求审核列表</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>认证审核<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/brandAuth/query"><i></i>品牌认证</a>
+                        <a href="$request.contextPath/subjectAuth/query"><i></i>项目认证</a>
+                        <a href="$request.contextPath/companyAuth/query"><i></i>公司认证</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>会员管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/userManager/query"><i></i>会员列表</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>资源位管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/ad/query"><i></i>广告管理</a>
+                        <a href="$request.contextPath/index-config"><i></i>首页内容管理</a>
+                        <a href="$request.contextPath/brand-index/recommended/query"><i></i>品牌首页管理</a>
+                        <a href="$request.contextPath/subject-index/recommended/query"><i></i>项目首页管理</a>
+                        <a href="$request.contextPath/search-recommend/subjects/recommended/query"><i></i>搜索推荐管理</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>意向管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/intentions/page/comments"><i></i>意向评价</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>资讯管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/infos/page/list"><i></i>资讯列表</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>旺铺秒杀<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/auctions/list"><i></i>活动排期管理</a>
+
+                    #*<a href="$request.contextPath/auctions/page/add"><i></i>新增秒杀活动</a>*#
+                        <a href="$request.contextPath/auction-apply/list"><i></i>项目方报名管理</a>
+                        <a href="$request.contextPath/auction-requirement/list"><i></i>品牌方预约管理</a>
+                        <a href="$request.contextPath/auctionsReqShare/list"><i></i>秒杀成功反馈</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>帮助中心<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/faq/init"><i></i>帮助中心维护</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>消息管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/message/init"><i></i>活动消息</a>
+                        <a href="$request.contextPath/messagetemplate/getMessageTemplate"><i></i>模板管理</a>
+                        <a href="$request.contextPath/message/initconfig"><i></i>APP推送上限设置</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>广告投放管理系统<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/advertising/channel/init"><i></i>管理广告投放渠道</a>
+                        <a href="$request.contextPath/advertising/plan/init"><i></i>管理广告投放计划</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>意见反馈<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/feedback/init?index=1"><i></i>意见反馈</a>
+                    </div>
+                </li>
+               <li>
+                    <a href="javascript:;" class="afir on"><i></i>权限管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                        <a href="$request.contextPath/roleManager/query"><i></i>角色管理</a>
+                        <a href="$request.contextPath/userpermission/list"><i></i>用户管理</a>
+                        *##*<a href="$request.contextPath/roleManager/query"><i></i>角色管理</a>*##*
+                    </div>
+                </li>
+
+
+               #* <li>
+                    <a href="javascript:;" class="afir on"><i></i>项目方报名管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                    <a href="$request.contextPath/auction-apply/list"><i></i>项目报名列表</a>
+                        <a href="$request.contextPath/auction/auctionAdd"><i></i>项目报名</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="afir on"><i></i>品牌方预约管理<span></span></a>
+                    <div class="slideB" style="display: block;">
+                    	<a href="$request.contextPath/auction-requirement/list"><i></i>品牌预约列表</a>
+                        <a href="$request.contextPath/intentions/page/comments"><i></i>品牌预约</a>
+                    </div>
+                </li>
+                *#
+##                <li>
+##                    <a href="javascript:;" class="afir on"><i></i>权限管理<span></span></a>
+##                    <div class="slideB" style="display: block;">
+##                        <a href="$request.contextPath/roleManager/query"><i></i>角色管理</a>
+##                    </div>
+##                </li>
+##                <li>
+##                    <a href="javascript:;" class="afir on"><i></i>账户管理<span></span></a>
+##                    <div class="slideB"  style="display: block;">
+##                        <a href="$request.contextPath/adminCustomerAccount?op=1"><i></i>投资人余额</a>
+##                        <a href="$request.contextPath/adminCustomerAccount?op=2"><i></i>借款人余额</a>
+##                        <a href="$request.contextPath/adminCompanyAccount/xsdBalance?offset=0&max=12"><i></i>雪山贷余额</a>
+##                        <a href="$request.contextPath/adminCash"><i></i>资金流水</a>
+##                    </div>
+##                </li>
+##                <li>
+##                    <a href="javascript:;" class="afir on"><i></i>其他管理<span></span></a>
+##                    <div class="slideB"  style="display: block;">
+##                        <a href="$request.contextPath/beforeBalance"><i></i>前余额列表</a>
+##                        <a href="javascript:;" onclick="alert('暂未实现')"><i></i>奖励列表</a>
+##                    </div>
+##                </li>
+            </ul>
+        </div>
+    </div>
+    <!--slideBar  end-->
+</div>
+<script>
+    var myScroll;
+
+    function loaded () {
+        myScroll = new IScroll('#wrapper', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+    }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    loaded ();
+</script>
+
+
+

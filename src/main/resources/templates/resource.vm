@@ -1,0 +1,10 @@
+<script src="${basePath}/static/js/jquery.js" type="text/javascript"></script>
+<script src="${basePath}/static/js/jquery.form.js" type="text/javascript"></script>
+<script src="${basePath}/static/js/bootstrapValidator.js" type="text/javascript"></script>
+<script src="${basePath}/static/js/jquery.showLoading.min.js" type="text/javascript"></script>
+<script src="${basePath}/static/js/normal.js" type="text/javascript"></script>
+<script src="${basePath}/static/js/common.js" type="text/javascript"></script>
+<script src="${basePath}/static/jquery-plugin/jquery.formautofill.min.js" type="text/javascript"></script>
+<script src="${basePath}/static/datePicker/wdatePicker.js" type="text/javascript"></script>
+<script src="${basePath}/static/js/auth.js" type="text/javascript"></script>
+<link href="${basePath}/static/css/global.css" rel="stylesheet" type="text/css">
