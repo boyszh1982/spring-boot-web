@@ -25,11 +25,11 @@
         </Async>
 	</Appenders>
 	<Loggers>
-		<Logger name="com.nameless" level="debug" additivity="false">
+		<Logger name="com.nameless" level="error" additivity="false">
 			<AppenderRef ref="console"/>
 			<AppenderRef ref="anormalRollingFile"/>
 		</Logger>
-		<Root level="debug">
+		<Root level="info">
 			<Appender-ref ref="console" />
 			<AppenderRef ref="anormalRollingFile"/>
 		</Root>

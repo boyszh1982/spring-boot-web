@@ -19,6 +19,7 @@ import com.nameless.properties.JdbcProp;
 @EntityScan(basePackages="com.nameless.entity")
 @EnableJpaRepositories(basePackages="com.nameless.repository")
 @EnableTransactionManagement
+//自定义Conf文件
 @EnableConfigurationProperties({JdbcProp.class})
 public class Application {
 	public static void main(String[] args) {
